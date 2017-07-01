@@ -23,12 +23,20 @@ public class UserDaoImpl implements UserDao {
     private SessionFactory sessionFactory;
 
 
-    public User getUserById(long userId) {
+    public User getUserById(int userId) {
 
+        String hql= "SELECT user FROM User user where id = ?";
+        Query query = getSession().createQuery(hql).setParameter(0, userId);
+        User user = (User)query.getSingleResult();
+        return user;
+    }
+
+    @Override
+    public List<User> getUsers(int start, int end) {
         String hql= "SELECT user FROM User user";
         Query query = getSession().createQuery(hql);
         List<User> users = (List<User>)query.getResultList();
-        return (users == null || users.size() == 0) ? null: users.get(0);
+        return users;
     }
 
     private Session getSession() {

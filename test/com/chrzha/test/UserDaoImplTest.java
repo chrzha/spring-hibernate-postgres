@@ -26,7 +26,7 @@ public class UserDaoImplTest {
         System.out.println(dataSource);
     }
     @Test
-    public void test2()
+    public void test2() throws Exception
     {
         User user = userService.getUserById(1);
         System.out.println(user);
