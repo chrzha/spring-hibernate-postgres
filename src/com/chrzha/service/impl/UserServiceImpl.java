@@ -1,12 +1,11 @@
 package com.chrzha.service.impl;
 
-import com.chrzha.NoSuchUserException;
+import com.chrzha.exception.NoSuchUserException;
 import com.chrzha.dao.UserDao;
 import com.chrzha.entity.User;
 import com.chrzha.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

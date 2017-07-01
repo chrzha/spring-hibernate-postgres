@@ -1,6 +1,6 @@
 package com.chrzha.dao;
 
-import com.chrzha.NoSuchUserException;
+import com.chrzha.exception.NoSuchUserException;
 import com.chrzha.entity.User;
 
 import java.util.List;

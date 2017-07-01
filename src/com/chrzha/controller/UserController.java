@@ -1,6 +1,6 @@
 package com.chrzha.controller;
 
-import com.chrzha.NoSuchUserException;
+import com.chrzha.exception.NoSuchUserException;
 import com.chrzha.entity.User;
 import com.chrzha.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
