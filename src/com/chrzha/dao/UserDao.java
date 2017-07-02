@@ -10,6 +10,9 @@ import java.util.List;
  */
 public interface UserDao {
     public User getUserById(int userId) throws NoSuchUserException;
-    public List<User> getUsers(int start, int end);
+    public List<User> getUsers(int pageNo, int pageSize);
+    public User addUser(User user);
+    public User deleteUserById();
+    public User updateUser(User user) throws NoSuchUserException;
 
 }

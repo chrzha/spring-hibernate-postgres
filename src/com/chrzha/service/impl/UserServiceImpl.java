@@ -24,7 +24,22 @@ public class UserServiceImpl implements UserService {
         return userDao.getUserById(userId);
     }
 
-    public List<User> getUsers(int start, int end) {
-        return userDao.getUsers(start, end);
+    public List<User> getUsers(int pageNo, int pageSize) {
+        return userDao.getUsers(pageNo, pageSize);
+    }
+
+    @Override
+    public User addUser(User user) {
+        return userDao.addUser(user);
+    }
+
+    @Override
+    public User deleteUserById() {
+        return null;
+    }
+
+    @Override
+    public User updateUser(User user) throws NoSuchUserException {
+        return userDao.updateUser(user);
     }
 }
