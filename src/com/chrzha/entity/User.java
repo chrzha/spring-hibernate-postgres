@@ -1,6 +1,8 @@
 package com.chrzha.entity;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * Created by Chris Zhang on 2017/6/18.
@@ -26,6 +28,29 @@ public class User {
 
     @Column(name="nicename",length=32)
     private String niceName;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Column(name="description", length=3000)
+    private String description;
+
+    public Date getLastModifiedTime() {
+        return lastModifiedTime;
+    }
+
+    public void setLastModifiedTime(Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
+
+    @Column(name="last_modified_time")
+    private Date lastModifiedTime;
+
 
     public Integer getId() {
         return id;

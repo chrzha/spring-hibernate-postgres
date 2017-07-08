@@ -17,5 +17,13 @@
         <property name="niceName" type="java.lang.String">
             <column name="nicename" />
         </property>
+
+        <property name="description" type="java.lang.String">
+            <column name="description" />
+        </property>
+        <property name="lastModifiedTime" type="java.util.Date">
+            <column name="last_modified_time" />
+        </property>
+
     </class>
 </hibernate-mapping>

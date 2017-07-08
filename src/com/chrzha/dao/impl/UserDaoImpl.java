@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.Query;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -46,6 +47,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User addUser(User user) {
+        user.setLastModifiedTime(new Date());
         getSession().save(user);
         return user;
     }
@@ -57,6 +59,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User updateUser(User user) throws NoSuchUserException {
+        user.setLastModifiedTime(new Date());
         getSession().update(user);
         return user;
     }
